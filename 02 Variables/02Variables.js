@@ -6,4 +6,4 @@ age = 30;
 name = "Sahan";
 live = "Colombo";
 
-console.log(name, age, live);Practice - Block scope & Function scope
+console.log(name, age, live);
