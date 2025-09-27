@@ -16,8 +16,9 @@ console.log(rest_argumenst);
 //OBJECT
 const obj1 = {one:10, two:20, three:30};
 
-const {one,two,...rest_obj} = obj1;
+const {one:x,two,...rest_obj} = obj1;
 
-console.log(one);
+// console.log(one);
+console.log(x);     //Instead of the variable name one, give x and get the value of x.
 console.log(two);
 console.log(rest_obj);
