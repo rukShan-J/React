@@ -22,3 +22,7 @@ class Rectangle {
 const newRectangle = new Rectangle(10, 8, 'red');
 console.log(newRectangle.getArea());
 console.log(newRectangle.aboutMe());
+
+const newRectangle2 = new Rectangle(15, 10, 'yellow');
+console.log(newRectangle2.getArea());
+console.log(newRectangle2.aboutMe());
