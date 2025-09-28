@@ -10,9 +10,15 @@ class Rectangle {
     getArea() {
         return this.width * this.height;
     }
+
+    aboutMe() {
+        return `I am a rectangle and my width is ${this.width}.
+        My height is ${this.height}.
+        My color is ${this.color}`;
+    }
 }
 
 // object
 const newRectangle = new Rectangle(10, 8, 'red');
-
 console.log(newRectangle.getArea());
+console.log(newRectangle.aboutMe());
