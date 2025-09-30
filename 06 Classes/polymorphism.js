@@ -18,9 +18,22 @@ class Dog extends Animal{
     }
 }
 
+class Cat extends Animal {
+    constructor() {
+        super();
+        console.log('A dog is created.');
+    }
+    makeSound() {
+        console.log('Meow...');
+    }
+}
+
 const someAnimal = new Animal;
 
 someAnimal.makeSound();
 
 const tommy = new Dog;
 tommy.makeSound();
+
+const lassy = new Cat;
+lassy.makeSound();
