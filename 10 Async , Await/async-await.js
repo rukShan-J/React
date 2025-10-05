@@ -4,7 +4,7 @@ function takeShower() {
             const shower = true;
             if(shower) {
                 console.log('You take shower');
-                resolve('You took shower');
+                resolve('You took shower - promise');
             } else {
                 reject('You didn\'t take shower');
             }
@@ -40,11 +40,15 @@ function play() {
     });
 }
 
-// First, need to create an async function. Then, can use the await keyword inside the async function to call functions like a normal function call.
+// First, need to create an async function. 
+// Then, can use the await keyword inside the async function to call functions like a normal function call.
 async function doAll() {
     try {
-        await takeShower();
-        await doHomework();
+        const result = await takeShower();  // Printing the text in the resolve (line 7)
+        console.log(result);
+
+        // await takeShower();
+        await doHomework();                 // Printing the text in the console (line 20)
         await play(); 
     } catch(error) {
         console.log(error);
