@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declarative React</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <!-- React and Babel scripts -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>    
+
+    <script type="text/babel">
+
+        //  Option 1: Implicit return with parentheses
+        const List = () => (
+            <ul>
+                <li>Item one</li>
+                <li>Item two</li>
+            </ul>
+        );
+
+        //  Option 2: Use "return" explicitly
+        // const List = () => {
+        //     return (
+        //         <ul>
+        //             <li>Item one</li>
+        //             <li>Item two</li>
+        //         </ul>
+        //     );
+        // };
+
+        ReactDOM.render(<List />, document.getElementById('root'));
+    </script>
+    
+</body>
+</html>
