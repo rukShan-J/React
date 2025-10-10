@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <title>Pure React App</title>
+</head>
+<body>
+    <!-- Root element where React will render the UI -->
+    <div id="root">Not Rendered</div>
+    <!-- React core library -->
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <!-- React DOM library (used to render React elements to the DOM) -->
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script>
+
+        const App = ()=>{
+            // Define a React component using a function
+            return React.createElement(
+                "div", // HTML element type
+                {}, // Props (empty in this case)
+                React.createElement("h1",{},"My React App") // Child element               
+            );
+        };
+
+        // Get the root DOM node
+        const container = document.getElementById("root");
+        // Create a React root for rendering (React 18+ feature)
+        const root = ReactDOM.createRoot(container);
+        // Render the App component inside the root element
+        root.render(React.createElement(App));
+    </script>
+</body>
+</html>
