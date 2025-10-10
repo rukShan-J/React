@@ -1,9 +1,28 @@
+// Add a Student component
+const Student = () => {
+    return React.createElement(
+        "div", // Parent div
+        {},    // No props
+        [
+            // Child elements (array of React elements)
+            React.createElement("h3", {}, "Amal"),      // Name
+            React.createElement("h3", {}, 20),          // Age
+            React.createElement("h3", {}, "Gampaha")    // City
+        ]
+    );
+};
+
 const App = ()=>{
     // Define a React component using a function
     return React.createElement(
         "div", // HTML element type
         {}, // Props (empty in this case)
-        React.createElement("h1",{},"My React App") // Child element               
+        // Child elements
+        [
+            React.createElement("h1",{},"My React App"),
+            React.createElement(Student),
+            React.createElement(Student),
+        ]
     );
 };
 
