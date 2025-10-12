@@ -1,0 +1,13 @@
+{
+  "name": "18-Install_Prettier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
