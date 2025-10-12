@@ -5,7 +5,7 @@ const Student = () => {
     {}, // No props
     [
       // Child elements (array of React elements)
-      React.createElement("h3", {}, "Amal"), // Name
+      React.createElement("h3", {}, "Kamal"), // Name
       React.createElement("h3", {}, 20), // Age
       React.createElement("h3", {}, "Gampaha"), // City
     ],
