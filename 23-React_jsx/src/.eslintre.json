@@ -17,5 +17,15 @@
     "es6": true,
     "browser": true,
     "node": true
+  },
+  "settings": {
+    "react": {
+      "version":"detect"
+    },
+    "import/resolver":{
+      "node":{
+        "extentions":["js","jsx"]
+      }
+    }
   }
 }
