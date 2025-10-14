@@ -2,23 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // Add a Student component
-const Student = () => {
+// const Student = () => {
+const Student = (props) => {     // *Updated
   return React.createElement(
     "div", // Parent div
     {}, // No props
     [
-      // Child elements (array of React elements)
-      React.createElement("h3", {}, "Kamal"), // Name
-      React.createElement("h3", {}, 20), // Age
-      React.createElement("h3", {}, "Gampaha"), // City
+      // React.createElement("h3", {}, "Kamal"),
+      // *Updated
+      React.createElement("h3", {}, props.name),      // Name
+      React.createElement("h3", {}, props.age),       // Age
+      React.createElement("h3", {}, props.homeTown),  // City
     ],
   );
 };
 
-// Add a StudentCard component
-const StudentCard = () => {
+
+// StudentCard component — wraps Student and an image
+const StudentCard = (props) => {
   return React.createElement(
-    "div", // Parent wrapper
+    "div",
     { className: "st-card" },
     [
       // Image element
@@ -27,9 +30,10 @@ const StudentCard = () => {
         alt: "Student Image",
         className: "student-image",
       }),
-      // Nested Student component
-      React.createElement(Student),
-    ],
+
+      // Nested Student component, passing all props
+      React.createElement(Student, {...props}, null),
+    ]
   );
 };
 
@@ -37,17 +41,30 @@ const StudentCard = () => {
 const App = () => {
   // Define a React component using a function
   return React.createElement(
-    "div", // HTML element type
-    {}, // Props (empty in this case)
-    // Child elements
+    "div",
+    {},
     [
       React.createElement("h1", {}, "My React App"),
-      React.createElement(StudentCard),
-      React.createElement(StudentCard),
-      React.createElement(StudentCard),
-      React.createElement(StudentCard),
-      React.createElement(StudentCard),
-    ],
+
+      // React.createElement(StudentCard)   // *Updated
+
+      // Multiple StudentCard components with props
+      React.createElement(StudentCard,{
+        name: "Amal",
+        age:20,
+        homeTown:"Gampaha"
+      },null),
+      React.createElement(StudentCard,{
+        name: "Kamal",
+        age:25,
+        homeTown:"Colombo"
+      },null),
+      React.createElement(StudentCard,{
+        name: "Nimal",
+        age:18,
+        homeTown:"Negombo"
+      }), 
+    ]
   );
 };
 
