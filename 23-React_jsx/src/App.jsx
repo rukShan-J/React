@@ -27,7 +27,8 @@ const App = () => {
   return (
     <div>
       <h1>My React App</h1>
-      <StudentCard />
+      {/* <StudentCard /> */}
+      <StudentCard name="Amal" age={20} homeTown="Gampaha"/>
     </div>
   );
 };
