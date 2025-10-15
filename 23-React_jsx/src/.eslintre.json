@@ -4,7 +4,11 @@
     "plugin:import/errors",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier"],
+    "prettier"
+  ],
+    "rules":{
+      "react/prop-types":"off"
+    },
   "plugins": [],
   "parserOptions": {
     "ecmaVersion": 2022,
