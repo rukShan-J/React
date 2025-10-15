@@ -28,7 +28,9 @@ const App = () => {
     <div>
       <h1>My React App</h1>
       {/* <StudentCard /> */}
-      <StudentCard name="Amal" age={20} homeTown="Gampaha"/>
+      <StudentCard name="Amal" age={20} homeTown="Gampaha"/>;
+      <StudentCard name="Kamal" age={21} homeTown="Negombo"/>;
+      <StudentCard name="Nimal" age={22} homeTown="Colombo"/>
     </div>
   );
 };
