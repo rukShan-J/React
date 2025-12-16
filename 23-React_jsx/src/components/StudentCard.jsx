@@ -29,4 +29,6 @@ const StudentCard = ({name,age,homeTown}) => {
     )
 };
 
+export const test = 10;
+
 export default StudentCard;

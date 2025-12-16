@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import StudentCard from "./components/StudentCard";
+import StudentCard, { test } from "./components/StudentCard";
+import { test } from "./components/StudentCard";
+console.log(test);
 
 // // Main App component
 // const App = () => {
@@ -22,6 +24,8 @@ import StudentCard from "./components/StudentCard";
 //     ]
 //   );
 // };
+
+
 
 const App = () => {
   return (
