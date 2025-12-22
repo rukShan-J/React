@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Student = ({name,age,homeTown}) => {
     return(
@@ -8,6 +9,12 @@ const Student = ({name,age,homeTown}) => {
             <h3>{homeTown}</h3>
         </div>
     )
+};
+
+Student.prototype = {
+    name: PropTypes.string,
+    age: PropTypes.number,
+    homeTown: PropTypes.string,
 };
 
 export default Student;
