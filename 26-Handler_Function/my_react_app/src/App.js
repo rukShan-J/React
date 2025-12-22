@@ -3,11 +3,13 @@ import './App.css';
 import React from 'react';
 
 function App() {
+  
   return (
     <div>
       <h1>My React App</h1>
-      <StudentCard name="Amal" age={20} homeTown="Gampaha"/>;
-      <StudentCard name="Kamal" age={21} homeTown="Negombo"/>;
+      <input type="text" id="normal-text-2"></input>
+      <StudentCard name="Amal" age={20} homeTown="Gampaha"/>
+      <StudentCard name="Kamal" age={21} homeTown="Negombo"/>
       <StudentCard name="Nimal" age={22} homeTown="Colombo"/>
     </div>
   );

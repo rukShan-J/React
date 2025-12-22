@@ -34,8 +34,9 @@
         <input type="text" id="normal-text">
         <script>
           const input = document.getElementById('normal-text');
-          input.addEventListener('input',function(){
-            console.log(input.value);
+          input.addEventListener('input',function(e){
+            // console.log(input.value);
+            console.log(e.target.value);
           });
         </script>
       </div>
