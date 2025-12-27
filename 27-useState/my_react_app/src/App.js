@@ -1,12 +1,12 @@
-import StudentCard from './components/StudentCard';
-import './App.css';
-import React from 'react';
+import React from "react";
+import StudentCard from "./components/StudentCard.jsx";
+import "./App.css";
 
 function App() {
 
   const handleChange = (event) =>{
     console.log(event.target.value);
-    const sampleText = document.getElementById('sample-text');
+    const sampleText = document.getElementById("sample-text");
     sampleText.innerHTML = event.target.value;
   }
 

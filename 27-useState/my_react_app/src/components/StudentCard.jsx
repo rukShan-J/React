@@ -1,4 +1,4 @@
-import Student from "../components/Student";
+import Student from "./Student.jsx";
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -11,10 +11,10 @@ const StudentCard = ({name,age,homeTown}) => {
             className="student-image" />
             <Student name={name} age={age} homeTown={homeTown}/>
         </div>
-    )
+    );
 };
 
-StudentCard.prototype = {
+StudentCard.propTypes = {
     name: PropTypes.string,
     age: PropTypes.number,
     homeTown: PropTypes.string,

@@ -11,7 +11,7 @@ const Student = ({name,age,homeTown}) => {
     )
 };
 
-Student.prototype = {
+Student.propTypes = {
     name: PropTypes.string,
     age: PropTypes.number,
     homeTown: PropTypes.string,
