@@ -21,7 +21,7 @@ function App() {
       <input type="text" id="normal-text-2" onChange={handleChange}></input>
       <div>
         <p id="sample-text">{x}</p>
-        <p id="sample-text">{text}</p>
+        <p id="sample-text-2">{text}</p>
       </div>
       <StudentCard name="Amal" age={20} homeTown="Gampaha"/>
       <StudentCard name="Kamal" age={21} homeTown="Negombo"/>
