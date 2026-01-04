@@ -5,10 +5,14 @@ import "./App.css";
 
 function App() {
 
+  const searchChange = (event) => {
+    console.log("Input changed:", event.target.value);
+  }
+
   return (
     <div>
       <h1>My React App</h1>
-      <SearchBar />
+      <SearchBar onSearch={searchChange}/>
       <div>
         <p id="sample-text"></p>
         <p id="sample-text-2"></p>
