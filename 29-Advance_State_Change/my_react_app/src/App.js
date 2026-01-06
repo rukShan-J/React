@@ -13,6 +13,9 @@ function App() {
     {name:"Pasan", age:19, town:"Colombo"}
   ]
 
+// Filtered students whose age is greater than input value
+  const searchedStudents = studentList.filter((student) => (student.age > text));
+
   const searchChange = (event) => {
     console.log("Input changed:", event.target.value);
     setText(event.target.value);
@@ -28,7 +31,7 @@ function App() {
       </div>
 
       {
-        studentList.map((student,index)=>{
+        searchedStudents.map((student,index)=>{
           return(
             <
               StudentCard
@@ -41,7 +44,7 @@ function App() {
         })
       }
       
-      <StudentCard name="Amal" age={text} homeTown="Gampaha"/>
+      <StudentCard name="Amal" age={20} homeTown="Gampaha"/>
       <StudentCard name="Kamal" age={21} homeTown="Negombo"/>
       <StudentCard name="Nimal" age={22} homeTown="Colombo"/>
     </div>
