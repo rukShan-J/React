@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
 
-  const [text,setText] = useState("10");
+  const [text,setText] = useState("");
 
   const studentList = [
     {name:"Dasun", age:17, town:"Gampaha"},
@@ -13,8 +13,13 @@ function App() {
     {name:"Pasan", age:19, town:"Colombo"}
   ]
 
-// Filtered students whose age is greater than input value
-  const searchedStudents = studentList.filter((student) => (student.age > text));
+  // Filtered students whose age is greater than input value
+  // const searchedStudents = studentList.filter((student) => (student.age > text));
+
+  // Filtered students by name
+  const searchedStudents = studentList.filter((student) => 
+    student.name.toLowerCase().includes(text.toLowerCase())
+  );
 
   const searchChange = (event) => {
     console.log("Input changed:", event.target.value);
@@ -44,9 +49,9 @@ function App() {
         })
       }
       
-      <StudentCard name="Amal" age={20} homeTown="Gampaha"/>
+      {/* <StudentCard name="Amal" age={20} homeTown="Gampaha"/>
       <StudentCard name="Kamal" age={21} homeTown="Negombo"/>
-      <StudentCard name="Nimal" age={22} homeTown="Colombo"/>
+      <StudentCard name="Nimal" age={22} homeTown="Colombo"/> */}
     </div>
   );
 }
