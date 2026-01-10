@@ -1,4 +1,6 @@
 const ArrayReduce = ({ numberList }) => {
+
+    const sum = numberList.reduce((total,num)=>(total+num));
    
     return (
         <div>
@@ -7,6 +9,8 @@ const ArrayReduce = ({ numberList }) => {
                 {/* write the code in a single line without using the return keyword */}
                 {numberList.map((num, index) => (<li key={index}>{num}</li>))}
             </ul>
+            <hr />
+            <p>{sum}</p>
         </div>
     );
 };
