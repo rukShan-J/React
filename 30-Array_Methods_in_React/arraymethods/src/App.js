@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import ArrayMap from './components/ArrayMap';
+import ArrayFilter from './components/ArrayFilter';
 import './App.css';
 
 const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Heidi', 'Ivan', 'Judy'];
@@ -13,6 +14,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <ArrayMap nameList={names} />
+        <ArrayFilter nameList={names} />
         
       </header>
     </div>
