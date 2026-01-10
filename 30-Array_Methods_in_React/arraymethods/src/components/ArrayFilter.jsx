@@ -1,7 +1,7 @@
 const ArrayFilter = ({ nameList }) => {
 
     // filter names that start with 'A' or 'E'
-    const filteredNames = nameList.filter((name) => name.startsWith('A') || name.startsWith('E'));
+    const filteredNames = nameList.filter((name) => name.toLowerCase().startsWith('a') || name.toLowerCase().startsWith('e'));
     
     return (
         <div>
