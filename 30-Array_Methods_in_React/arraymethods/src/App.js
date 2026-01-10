@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import ArrayMap from './components/ArraayMap';
+import ArrayMap from './components/ArrayMap';
 import './App.css';
 
 const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Heidi', 'Ivan', 'Judy'];
