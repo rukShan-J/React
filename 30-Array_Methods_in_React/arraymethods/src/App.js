@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import ArrayMap from './components/ArrayMap';
 import ArrayFilter from './components/ArrayFilter';
+import ArrayReduce from './components/ArrayReduce';
 import './App.css';
 
 const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Heidi', 'Ivan', 'Judy'];
 
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
         <ArrayMap nameList={names} />
         <ArrayFilter nameList={names} />
+        <ArrayReduce numberList={numbers} />
         
       </header>
     </div>
