@@ -7,7 +7,7 @@ const ArrayReduce = ({ numberList }) => {
    
     return (
         <div>
-            <h1>Filtered Name List(Filter)</h1>
+            <h1>Sum of Numbers(Reduce)</h1>
             <ul>
                 {numberList.map((num, index) => (<li key={index}>{num}</li>))}
             </ul>
