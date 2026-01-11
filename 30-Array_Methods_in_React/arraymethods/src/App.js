@@ -4,6 +4,7 @@ import ArrayFilter from './components/ArrayFilter';
 import ArrayReduce from './components/ArrayReduce';
 import ArrayForEach from './components/ArrayForEach';
 import ArrayFind from './components/ArrayFind';
+import ArrayFindIndex from './components/ArrayFindIndex';
 import './App.css';
 
 const names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Heidi', 'Ivan', 'Judy'];
@@ -21,6 +22,7 @@ function App() {
         <ArrayReduce numberList={numbers} />
         <ArrayForEach nameList={names}/>
         <ArrayFind nameList={names} numberList={numbers} />
+        <ArrayFindIndex nameList={names}/>
         
       </header>
     </div>
