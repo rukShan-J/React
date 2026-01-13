@@ -1,8 +1,17 @@
+// import { Fragment } from "react/jsx-runtime";
+// import React from "react";
+
 const ListItems = ({items}) => {
     return(
-        <div>
+        // <div> 
+        // <Fragment>
+        // <React.Fragment>
+        <>
             {items.map((item,index)=>(<li key={index}>{item}</li>))}
-        </div>
+        </>
+        // </React.Fragment>
+        // </Fragment>
+        // </div>
     );
 }
 
