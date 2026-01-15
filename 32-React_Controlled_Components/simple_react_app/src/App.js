@@ -14,7 +14,12 @@ function App() {
 
   const handlePronoun = (event) => {
     const selectedPronoun = event.target.value;
-    setGender(selectedPronoun);
+    setGender(pronounList[selectedPronoun] || ''); /* Default to empty string if no match
+    if (pronounList[selectedPronoun]) {
+      return pronounList[selectedPronoun];
+    } else {
+      return '';
+    } */
   };
 
   return (
@@ -36,12 +41,12 @@ function App() {
 
         <div>
           <label>Male</label>
-          <input value='Male' type='radio' name='gender' />
+          <input value='Male' type='radio' name='gender' checked={gender === 'Male'} />
         </div>
 
         <div>
           <label>Female</label>
-          <input value='Female' type='radio' name='gender' />
+          <input value='Female' type='radio' name='gender' checked={gender === 'Female'} />
         </div>
 
         <p>{gender}</p>
