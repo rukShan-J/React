@@ -2,21 +2,40 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const pronounList = { 
+    'Mr' : 'Male',
+    'Ms' : 'Female',
+    'Miss' : 'Female'
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <label htmlFor='pronoun'>Select Pronoun: </label>
+        <select key={'pronoun'}>
+          <option value="">Select your pronoun</option>
+          <option value="Mr">Mr</option>
+          <option value="Ms">Ms</option>
+          <option value="Miss">Miss</option>
+        </select>
+
+        <br/>
+
+        <input type='text' placeholder='First Name: ' />
+        <input type='text' placeholder='Last Name: ' />
+
+        <div>
+          <label>Male</label>
+          <input type='radio' />
+        </div>
+
+        <div>
+          <label>Feale</label>
+          <input type='radio' />
+        </div>
+
       </header>
     </div>
   );
