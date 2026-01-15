@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [gender, setGender] = useState('');
 
   const pronounList = { 
     'Mr' : 'Male',
@@ -11,6 +14,7 @@ function App() {
 
   const handlePronoun = (event) => {
     const selectedPronoun = event.target.value;
+    setGender(selectedPronoun);
   };
 
   return (
@@ -32,13 +36,15 @@ function App() {
 
         <div>
           <label>Male</label>
-          <input type='radio' />
+          <input value='Male' type='radio' name='gender' />
         </div>
 
         <div>
-          <label>Feale</label>
-          <input type='radio' />
+          <label>Female</label>
+          <input value='Female' type='radio' name='gender' />
         </div>
+
+        <p>{gender}</p>
 
       </header>
     </div>
