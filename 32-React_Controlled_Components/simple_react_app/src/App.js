@@ -7,14 +7,18 @@ function App() {
     'Mr' : 'Male',
     'Ms' : 'Female',
     'Miss' : 'Female'
-  }
+  };
+
+  const handlePronoun = (event) => {
+    const selectedPronoun = event.target.value;
+  };
 
   return (
     <div className="App">
       <header className="App-header">
 
         <label htmlFor='pronoun'>Select Pronoun: </label>
-        <select key={'pronoun'}>
+        <select key={'pronoun'} onChange={handlePronoun}>
           <option value="">Select your pronoun</option>
           <option value="Mr">Mr</option>
           <option value="Ms">Ms</option>
@@ -39,6 +43,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
