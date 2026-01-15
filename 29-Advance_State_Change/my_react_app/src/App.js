@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
 
-  const [text,setText] = useState("");
+  const [text,setText] = useState("k");
 
   const studentList = [
     {name:"Dasun", age:17, town:"Gampaha"},
@@ -29,7 +29,7 @@ function App() {
   return (
     <div>
       <h1>My React App</h1>
-      <SearchBar onSearch={searchChange}/>
+      <SearchBar onSearch={searchChange} searchText={text}/>
       <div>
         <p id="sample-text">{text}</p>
         <p id="sample-text-2"></p>
