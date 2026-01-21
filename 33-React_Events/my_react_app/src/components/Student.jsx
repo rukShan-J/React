@@ -3,8 +3,14 @@ import PropTypes from "prop-types";
 
 const Student = ({name,age,homeTown}) => {
 
-    const handleWheel = () => {
-        console.log("OnWheel Event");    
+    const handleWheel = (event) => {
+        // console.log("OnWheel Event");
+        console.log(event.deltaY);  
+        if(event.deltaY > 0){
+            console.log("Scrolling Up");
+        } else{
+            console.log("Scrolling Down");
+        };
     };
 
     return(
