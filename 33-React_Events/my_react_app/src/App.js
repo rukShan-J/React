@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
 
-  const [text,setText] = useState("k");
+  const [text,setText] = useState("");
 
   const studentList = [
     {name:"Dasun", age:17, town:"Gampaha"},

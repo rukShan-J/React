@@ -2,13 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Student = ({name,age,homeTown}) => {
+
+    const handleWheel = () => {
+        console.log("OnWheel Event");    
+    };
+
     return(
         <div>
             <h3>{name}</h3>
-            <h3>{age}</h3>
+            <h3 onWheel={handleWheel}>{age}</h3>
             <h3>{homeTown}</h3>
         </div>
-    )
+    );
 };
 
 Student.propTypes = {
