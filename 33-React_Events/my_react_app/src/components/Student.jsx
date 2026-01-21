@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 const Student = ({name,age,homeTown}) => {
+
+    const [newAge,setNewAge] = useState(age);
 
     const handleWheel = (event) => {
         // console.log("OnWheel Event");
         console.log(event.deltaY);  
         if(event.deltaY > 0){
-            console.log("Scrolling Up");
-        } else{
             console.log("Scrolling Down");
+            setNewAge(newAge - 1);
+        } else{
+            console.log("Scrolling Up");
+            setNewAge(newAge + 1);
         };
     };
 
     return(
         <div>
             <h3>{name}</h3>
-            <h3 onWheel={handleWheel}>{age}</h3>
+            <h3 onWheel={handleWheel}>{newAge}</h3>
             <h3>{homeTown}</h3>
         </div>
     );
