@@ -4,9 +4,14 @@ import { Component } from 'react';
 
 class App extends Component { // This is a class component
 
-    // constructor(props) {
-    //     super(props);
-    // }
+    constructor(props) {
+        super(props);
+
+        this.state = ({
+            name: "Rukshan",
+            age: 24
+        })
+    }
 
     render() {
         return (
@@ -16,6 +21,7 @@ class App extends Component { // This is a class component
                     <p>
                         Edit ... <code>src/App.js</code> and save to reload.
                     </p>
+                    <p>{this.state.name} is {this.state.age} years old.</p>
                 </header>
             </div>
         );
