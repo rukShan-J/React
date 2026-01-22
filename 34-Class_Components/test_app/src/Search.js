@@ -11,6 +11,7 @@ class Search extends Component {
     onSearch = (event) => {
         console.log("Searching for:", event.target.value);
         this.setState({ text: event.target.value });
+        this.props.onSearch(event); // Call the method passed as prop from App component
     }
 
     render() {
