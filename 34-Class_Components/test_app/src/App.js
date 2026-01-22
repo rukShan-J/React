@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
 import Student from './Student';
+import Search from './Search';
 
 class App extends Component { // This is a class component
 
@@ -22,6 +23,7 @@ class App extends Component { // This is a class component
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
+                    <Search />  {/* Including Search component */}
                     <p>
                         Edit ... <code>src/App.js</code> and save to reload.
                     </p>
