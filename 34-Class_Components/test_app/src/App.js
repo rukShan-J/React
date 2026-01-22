@@ -14,6 +14,9 @@ class App extends Component { // This is a class component
     }
 
     render() {
+
+        const{ name, age } = this.state; // Destructuring
+        
         return (
             <div className="App">
                 <header className="App-header">
@@ -21,7 +24,8 @@ class App extends Component { // This is a class component
                     <p>
                         Edit ... <code>src/App.js</code> and save to reload.
                     </p>
-                    <p>{this.state.name} is {this.state.age} years old.</p>
+                    {/* <p>{this.state.name} is {this.state.age} years old.</p> */}
+                    <p>{name} is {age} years old.</p>
                 </header>
             </div>
         );
