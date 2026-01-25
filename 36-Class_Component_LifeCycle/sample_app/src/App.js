@@ -1,9 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
+// make the app component into a class component
+class App extends Component{
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return(
+      <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +26,9 @@ function App() {
         </a>
       </header>
     </div>
-  );
+    );
+  }
+
 }
 
 export default App;
