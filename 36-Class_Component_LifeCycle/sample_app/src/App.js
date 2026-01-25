@@ -1,14 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import Student from './Student';
 
 // make the app component into a class component
 class App extends Component{
   constructor(props){
     super(props);
+    this.state = {
+      name: "Rukshan", //passing data to student component
+      age: 24
+    };
   }
 
   render(){
+
+    const { name, age } = this.state; //object destructuring
+
     return(
       <div className="App">
       <header className="App-header">
@@ -24,6 +32,9 @@ class App extends Component{
         >
           Learn React
         </a>
+
+        <Student name={this.state.name} age={this.state.age} />
+        
       </header>
     </div>
     );
