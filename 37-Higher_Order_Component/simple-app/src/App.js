@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import TextField from './TextField';
+import LabeledTextField from './LabeledTextField';
+
+const NewLabeledTextField = LabeledTextField(TextField,"First Name");
 
 function App() {
   return (
@@ -9,6 +13,11 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+
+        <TextField />
+        <br />
+        <NewLabeledTextField />
+
         <a
           className="App-link"
           href="https://reactjs.org"
