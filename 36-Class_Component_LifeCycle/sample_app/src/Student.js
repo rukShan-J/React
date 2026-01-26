@@ -42,7 +42,13 @@ class Student extends Component {
     //getSnapshotBeforeUpdate() - invoked right before the most recently rendered output is committed to the DOM
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log("getSnapshotBeforeUpdate");
-        return null; //no snapshot value needed
+        return prevProps.name //no snapshot value needed
+    }
+
+    //componentDidUpdate() - invoked immediately after updating occurs
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log("componentDidUpdate - Component Updated");
+        console.log("Previous Name Prop: ", snapshot);
     }
 
     render() {
