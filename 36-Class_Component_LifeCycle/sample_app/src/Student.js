@@ -39,6 +39,12 @@ class Student extends Component {
         }
     }
 
+    //getSnapshotBeforeUpdate() - invoked right before the most recently rendered output is committed to the DOM
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log("getSnapshotBeforeUpdate");
+        return null; //no snapshot value needed
+    }
+
     render() {
 
         const { name, age } = this.props; //object destructuring
