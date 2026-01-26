@@ -28,6 +28,12 @@ class Student extends Component {
         }, 3000);
     }
 
+    //shouldComponentUpdate() - invoked before rendering when new props or state are being received
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("shouldComponentUpdate");
+        return true; //allow re-rendering
+    }
+
     render() {
 
         const { name, age } = this.props; //object destructuring
