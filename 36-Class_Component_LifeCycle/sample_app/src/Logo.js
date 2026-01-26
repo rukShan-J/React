@@ -6,6 +6,12 @@ class Logo extends Component {
         super(props);
     }
 
+    //componentWillUnmount() - invoked immediately before a component is unmounted and destroyed
+    componentWillUnmount() {
+        console.log("componentWillUnmount - Logo Component Unmounted");
+        alert("Logo will be removed!");
+    }
+
     render() {
         return (
             <>
