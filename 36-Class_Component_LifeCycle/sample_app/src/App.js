@@ -14,6 +14,10 @@ class App extends Component{
     };
   }
 
+  onSearch = (event) => {
+    this.setState({ name: event.target.value }); //update state with input value
+  }
+
   render(){
 
     const { name, age } = this.state; //object destructuring
@@ -23,8 +27,8 @@ class App extends Component{
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <Search /> {/* including the Search component */}
-        
+        <Search onSearch={this.onSearch} /> {/* including the Search component */}
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>

@@ -31,7 +31,12 @@ class Student extends Component {
     //shouldComponentUpdate() - invoked before rendering when new props or state are being received
     shouldComponentUpdate(nextProps, nextState) {
         console.log("shouldComponentUpdate");
-        return true; //allow re-rendering
+        // return true; //allow re-rendering
+        if(nextProps.name.length > 2){ //only allow re-rendering if name length is greater than 2
+            return true; //allow re-rendering
+        } else {
+            return false; //prevent re-rendering
+        }
     }
 
     render() {

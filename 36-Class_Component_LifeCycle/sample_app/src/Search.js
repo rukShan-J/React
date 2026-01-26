@@ -8,6 +8,7 @@ class Search extends React.Component {
 
     onSearch = (event) => {
         this.setState({ text: event.target.value }); //update state with input value
+        this.props.onSearch(event); //call the onSearch method passed via props
     }
 
     render() {
