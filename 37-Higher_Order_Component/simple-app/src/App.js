@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import TextField from './TextField';
 import LabeledTextField from './LabeledTextField';
+import Button from './Button';
 
 const NewLabeledTextField = LabeledTextField(TextField,"First Name");
 
@@ -26,6 +27,9 @@ function App() {
         >
           Learn React
         </a>
+
+        <Button text="Click Me!" />
+
       </header>
     </div>
   );
